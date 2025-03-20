@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deception House</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #b490108c;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+            font-family:monospace
+        }
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+}
+.intro-section {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: rgba(140, 93, 6, 0.902); /* Tạo hiệu ứng mờ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+        }
+        .intro-content {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 80%;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .role-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-items: center;
+            padding-bottom: 60px;
+        }
+        .role-card {
+            width: 200px;
+            height: 360px;
+            perspective: 2000px;
+        }
+        .role-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+        .role-card:hover .role-inner {
+            transform: rotateY(180deg);
+        }
+        .role-front, .role-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 18px;
+            padding: 15px;
+            font-weight: bold;
+        }
+        .role-front {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            flex-direction: column;
+        }
+        .role-front img {
+            width: 100%;
+            height: 80%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .role-front span {
+            margin-top: 10px;
+             color: black;
+             text-shadow: none;
+            }
+        
+        .role-back {
+            background: #fff;
+            color: black;
+            font-size: 16px;
+            transform: rotateY(180deg);
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .start-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 18px;
+            text-align: center;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .start-button:hover {
+            background: #218838;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        .contact-section h2 {
+    color: #333;
+    padding-left: 3.5cm; /* Dịch chữ sang phải 3.5 cm */
+}
+    
+    .contact-section p {
+        width: 80%;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-left: 3.5cm; /* Dịch sang phải 5cm */
+    }
+    footer {
+        text-align: center;
+        padding: 10px;
+        background: #333;
+        color: white;
+        margin-top: 20px;
+    }
+    </style>
+</head>
+<body>
+    <header>Deception House - Board Game</header>
+    <div class="intro-section">
+        <div class="intro-content">
+            <p>Một vụ án bí ẩn. Một kẻ sát nhân ẩn mình trong bóng tối. Một thị trấn tràn ngập những lời đồn đoán và âm mưu. Bạn có dám bước chân vào thế giới nơi không ai đáng tin tưởng—kể cả chính bạn?</p>
+            <p>💀 <strong>Sát nhân máu lạnh</strong> đang lẩn trốn giữa những người chơi, giăng bẫy, thủ tiêu từng nhân chứng mà không để lại dấu vết. Liệu <strong>cảnh sát</strong> có đủ thông minh để phá án trước khi quá muộn? Hay họ sẽ bị đánh lừa bởi những nhân vật kỳ quặc: <strong>cô lao công lẩm bẩm, shipper giao hàng siêu tốc, người mất ngủ hóng hớt mọi thứ</strong>, và <strong>cặp vợ chồng "sừng dài" đầy drama</strong>?</p>
+            <p>🔍 <strong>Truy tìm manh mối, tra khảo kẻ tình nghi, phản bội đồng minh và lật mặt kẻ thủ ác</strong>—mỗi lựa chọn đều có thể đưa bạn đến chiến thắng… hoặc cái kết đầy cay đắng!</p>
+            <p>🔥 <strong>Hãy cẩn thận!</strong> </p>
+        </div>
+
+    </div>
+    <div class="container">
+        <h2>Giới thiệu Role</h2>
+        <div class="role-container">
+            <div class="role-card"><div class="role-inner"><div class="role-front"><img src="images/9e015949-13cc-4ff0-b9ca-08c5e4d81aeb.jpg" alt="Chuyên gia pháp chứng"><span> Sát nhân </span></div><div class="role-back">Hạ gục mọi người mà không bị phát hiện.</div></div></div>
+            <div class="role-card"><div class="role-inner"><div class="role-front"><img src="images/2.jpg" alt="Điều tra viên"><span>Lao công</span></div><div class="role-back"> Có nhiệm vụ tìm ra sát nhân trước khi quá muộn</div></div></div>
+            <div class="role-card"><div class="role-inner"><div class="role-front"><img src="images/3.jpg" alt="Nghi phạm"><span>Cảnh sát</span></div><div class="role-back">Giao hàng nhanh, trốn còn nhanh hơn. Có thể di chuyển hai lần trong đêm</div></div></div>
+            <div class="role-card"><div class="role-inner"><div class="role-front"><img src="images/4.jpg" alt="Luật sư"><span>Vợ chồng</span></div><div class="role-back"> Tìm một người ghép cặp với mình, biết được chức năng và vị trí của họ </div></div></div>
+            <div class="role-card"><div class="role-inner"><div class="role-front"><img src="images/5.jpg" alt="Nhân chứng"><span>Shipper</span></div><div class="role-back">Dọn dẹp chuyên nghiệp  Mục tiêu: Có thể giúp công an hoặc bảo vệ hung thủ</div></div></div>
+            <div class="role-card"><div class="role-inner"><div class="role-front"><img src="images/6.jpg" alt="Hung thủ"><span>Người mất ngủ</span></div><div class="role-back">Có khả năng biết được sát nhân đã ở đâu</div></div></div>
+        </div>
+        <div class="section">
+            <h2>Cách chơi</h2>
+            <h3>1. Luật Chơi Cơ Bản</h3>
+            <p><strong>🎯 Mục tiêu của mỗi phe:</strong><br>
+            Hung thủ: Loại bỏ các nhân vật khác mà không bị phát hiện.<br>
+            Công an - Người dân: Tìm ra hung thủ trước khi quá muộn.<br>
+            Các nhân vật khác: Mỗi người có mục tiêu riêng, có thể giúp công an, giúp hung thủ hoặc chỉ muốn sống sót.</p>
+            <p><strong>🎲 Lượt chơi diễn ra thế nào?</strong><br>
+            Mỗi vòng sẽ có 2 giai đoạn:<br>
+            - <strong>Giai đoạn di chuyển bí mật:</strong> Người chơi chọn điểm đến trên bản đồ phụ (không ai biết vị trí chính xác).<br>
+            - <strong>Giai đoạn hành động:</strong> Mỗi người có thể thực hiện một hành động duy nhất (sử dụng kỹ năng hoặc khám phá).<br>
+            Khi đủ thông tin, người chơi có thể bỏ phiếu để tố cáo ai là hung thủ. Nếu đúng, công an thắng. Nếu sai, hung thủ tiếp tục hành động cho đến khi đạt mục tiêu.</p>
+            <h3>2. Cách Di Chuyển Bí Mật 🕵️</h3>
+            <p><strong>🔹 Sử dụng bản đồ phụ:</strong><br>
+            - Mỗi người ghi lại điểm đến trên một tờ giấy nhỏ hoặc app.<br>
+            - Khi tất cả đã chọn, mọi người đồng loạt tiết lộ vị trí nhưng không tiết lộ đường đi.</p>
+            <p><strong>🔹 Tại sao cách này quan trọng?</strong><br>
+            ➡️ Hung thủ có thể di chuyển đến hiện trường gây án mà không ai biết.<br>
+            ➡️ Người mất ngủ có thể dự đoán ai đã đi đâu mà không có chứng cứ chính xác.</p>
+        </div>
+        <a href="https://www.facebook.com/profile.php?id=61574422191091&rdid=P1PT7UMRvgy3DrtJ&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18j5BwJcf3#" class="start-button">Bắt đầu chơi</a>
+    </div>
+    <div class="contact-section">
+        <h2>Thông tin liên hệ </h2>
+        <p>Email: deceptionboardgame@gmail.com</p>
+        <p>Hotline: 0911 313 0054</p>
+        <p>Địa chỉ: Hòa Hải, Ngũ Hành Sơn, Đà Nẵng</p>
+    </div>
+    <footer>&copy; 2025 Boardgame Deception House. All Rights Reserved.</footer>
+</body>
+</html>
